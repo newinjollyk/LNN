@@ -1,0 +1,16 @@
+<sdf version="1.7">
+  <world name="test">
+    <gui fullscreen="0">
+      <plugin filename="libignition-gazebo-editing3.so"
+              name="ignition::gazebo::systems::Editing"/>
+    </gui>
+    <model name="box">
+      <static>false</static>
+      <link name="L">
+        <visual name="V">
+          <geometry><box><size>1 1 1</size></box></geometry>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

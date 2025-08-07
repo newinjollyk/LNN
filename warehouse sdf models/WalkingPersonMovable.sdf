@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="WalkingPersonMovable">
+    <static>false</static>
+    <link name="body">
+      <pose>0 0 0 0 0 0</pose>
+      <visual name="person_vis">
+        <geometry>
+          <mesh>
+            <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Walking Person</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="person_coll">
+        <pose>0 0 0.85 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.5 0.5 1.7</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
