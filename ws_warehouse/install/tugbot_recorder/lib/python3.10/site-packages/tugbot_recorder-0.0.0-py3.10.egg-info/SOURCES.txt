@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/tugbot_recorder/tugbot_recorder.egg-info/PKG-INFO
+../../build/tugbot_recorder/tugbot_recorder.egg-info/SOURCES.txt
+../../build/tugbot_recorder/tugbot_recorder.egg-info/dependency_links.txt
+../../build/tugbot_recorder/tugbot_recorder.egg-info/entry_points.txt
+../../build/tugbot_recorder/tugbot_recorder.egg-info/requires.txt
+../../build/tugbot_recorder/tugbot_recorder.egg-info/top_level.txt
+../../build/tugbot_recorder/tugbot_recorder.egg-info/zip-safe
+resource/tugbot_recorder
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+tugbot_recorder/__init__.py
+tugbot_recorder/recorder.py

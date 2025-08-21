@@ -1,1 +1,6 @@
+# Ignore SDF models
 warehouse_sdf_models/
+
+# Ignore generated datasets
+ws_warehouse/dataset/
+

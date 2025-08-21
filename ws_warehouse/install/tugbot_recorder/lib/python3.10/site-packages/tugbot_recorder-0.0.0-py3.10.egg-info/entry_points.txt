@@ -1,0 +1,3 @@
+[console_scripts]
+recorder = tugbot_recorder.recorder:main
+
