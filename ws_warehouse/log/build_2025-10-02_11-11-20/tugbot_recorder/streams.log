@@ -1,0 +1,24 @@
+[0.468s] Invoking command in '/home/newin/Projects/warehouse/ws_warehouse/src/tugbot_recorder': PYTHONPATH=/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tugbot_recorder build --build-base /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build install --record /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/install.log --single-version-externally-managed install_data
+[0.657s] running egg_info
+[0.658s] writing ../../build/tugbot_recorder/tugbot_recorder.egg-info/PKG-INFO
+[0.658s] writing dependency_links to ../../build/tugbot_recorder/tugbot_recorder.egg-info/dependency_links.txt
+[0.658s] writing entry points to ../../build/tugbot_recorder/tugbot_recorder.egg-info/entry_points.txt
+[0.658s] writing requirements to ../../build/tugbot_recorder/tugbot_recorder.egg-info/requires.txt
+[0.658s] writing top-level names to ../../build/tugbot_recorder/tugbot_recorder.egg-info/top_level.txt
+[0.659s] reading manifest file '../../build/tugbot_recorder/tugbot_recorder.egg-info/SOURCES.txt'
+[0.660s] writing manifest file '../../build/tugbot_recorder/tugbot_recorder.egg-info/SOURCES.txt'
+[0.660s] running build
+[0.660s] running build_py
+[0.660s] copying tugbot_recorder/recorder.py -> /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build/lib/tugbot_recorder
+[0.660s] running install
+[0.660s] running install_lib
+[0.661s] copying /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build/lib/tugbot_recorder/recorder.py -> /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder
+[0.661s] byte-compiling /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder/recorder.py to recorder.cpython-310.pyc
+[0.663s] running install_data
+[0.663s] running install_egg_info
+[0.664s] removing '/home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder-0.0.0-py3.10.egg-info' (and everything under it)
+[0.664s] Copying ../../build/tugbot_recorder/tugbot_recorder.egg-info to /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder-0.0.0-py3.10.egg-info
+[0.665s] running install_scripts
+[0.679s] Installing recorder script to /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/tugbot_recorder
+[0.680s] writing list of installed files to '/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/install.log'
+[0.700s] Invoked command in '/home/newin/Projects/warehouse/ws_warehouse/src/tugbot_recorder' returned '0': PYTHONPATH=/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tugbot_recorder build --build-base /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build install --record /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/install.log --single-version-externally-managed install_data

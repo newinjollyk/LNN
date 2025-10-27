@@ -1,0 +1,29 @@
+[0.459s] Invoking command in '/home/newin/Projects/warehouse/ws_warehouse/src/tugbot_recorder': PYTHONPATH=/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tugbot_recorder build --build-base /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build install --record /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/install.log --single-version-externally-managed install_data
+[0.644s] running egg_info
+[0.644s] writing ../../build/tugbot_recorder/tugbot_recorder.egg-info/PKG-INFO
+[0.644s] writing dependency_links to ../../build/tugbot_recorder/tugbot_recorder.egg-info/dependency_links.txt
+[0.644s] writing entry points to ../../build/tugbot_recorder/tugbot_recorder.egg-info/entry_points.txt
+[0.645s] writing requirements to ../../build/tugbot_recorder/tugbot_recorder.egg-info/requires.txt
+[0.645s] writing top-level names to ../../build/tugbot_recorder/tugbot_recorder.egg-info/top_level.txt
+[0.646s] reading manifest file '../../build/tugbot_recorder/tugbot_recorder.egg-info/SOURCES.txt'
+[0.646s] writing manifest file '../../build/tugbot_recorder/tugbot_recorder.egg-info/SOURCES.txt'
+[0.646s] running build
+[0.646s] running build_py
+[0.646s] copying tugbot_recorder/recorder.py -> /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build/lib/tugbot_recorder
+[0.647s] running install
+[0.647s] running install_lib
+[0.647s] copying /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build/lib/tugbot_recorder/recorder.py -> /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder
+[0.648s] byte-compiling /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder/recorder.py to recorder.cpython-310.pyc
+[0.650s]   File "/home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder/recorder.py", line 194
+[0.650s]     self.current_lidar = [round(r, 3) for r in msg.ranges[::10+]]
+[0.650s]                                                                ^
+[0.650s] SyntaxError: invalid syntax
+[0.650s] 
+[0.650s] running install_data
+[0.650s] running install_egg_info
+[0.651s] removing '/home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder-0.0.0-py3.10.egg-info' (and everything under it)
+[0.651s] Copying ../../build/tugbot_recorder/tugbot_recorder.egg-info to /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder-0.0.0-py3.10.egg-info
+[0.652s] running install_scripts
+[0.666s] Installing recorder script to /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/tugbot_recorder
+[0.666s] writing list of installed files to '/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/install.log'
+[0.686s] Invoked command in '/home/newin/Projects/warehouse/ws_warehouse/src/tugbot_recorder' returned '0': PYTHONPATH=/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tugbot_recorder build --build-base /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build install --record /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/install.log --single-version-externally-managed install_data

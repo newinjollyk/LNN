@@ -1,0 +1,5 @@
+  File "/home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder/recorder.py", line 194
+    self.current_lidar = [round(r, 3) for r in msg.ranges[::10+]]
+                                                               ^
+SyntaxError: invalid syntax
+
