@@ -13,6 +13,9 @@ test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
 tugbot_recorder/__init__.py
+tugbot_recorder/lnn_prediction.py
+tugbot_recorder/lnn_prediction_01.py
+tugbot_recorder/lnn_prediction_01_FPS.py
 tugbot_recorder/recorder.py
 tugbot_recorder/recorder_aruco_01.py
 tugbot_recorder/recorder_initial.py

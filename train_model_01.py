@@ -11,8 +11,10 @@ import numpy as np
 import pandas as pd
 import json
 import tensorflow as tf
+from tensorflow import keras
 from tensorflow.keras import layers, models
 import matplotlib.pyplot as plt 
+from ncps.tf import CfC
 
 
 # =============================== CONFIG =====================================
@@ -23,7 +25,7 @@ IMAGE_DIR  = "/home/newin/Projects/warehouse/dataset_clear/goal _A/images"    # 
 #LOG_DIR   = "/home/newin/Projects/warehouse/log_dir/lnn_ltc"
 
 # ---- One place to name this run ----
-RUN_FOLDER = "home2A_seq32_cfc64"   # <— change this per run
+RUN_FOLDER = "home2A_seq32_cfc64_tr_01"   # <— change this per run
 
 # Root folders
 ROOT_MODEL_DIR = "/home/newin/Projects/warehouse/models"
@@ -36,6 +38,8 @@ os.makedirs(MODEL_DIR, exist_ok=True)
 os.makedirs(LOG_DIR, exist_ok=True)
 
 SAVE_PATH = os.path.join(MODEL_DIR, f"{RUN_FOLDER}.keras")
+WEIGHTS_PATH = os.path.join(MODEL_DIR, f"{RUN_FOLDER}.weights.h5")
+
 
 print(f"[OUT] Model dir : {MODEL_DIR}")
 print(f"[OUT] Log dir   : {LOG_DIR}")
@@ -354,19 +358,6 @@ def plot_val_train_gap(history, out_dir, fname="val_train_mae_gap.png"):
     plt.close()
     print(f"[PLOT] {path}")
 
-def compute_per_timestep_mae(model, val_ds, seq_len):
-    """Return array shape (seq_len,) with mean MAE per timestep over the whole val set."""
-    import numpy as np
-    sums = np.zeros(seq_len, dtype=np.float64)
-    counts = np.zeros(seq_len, dtype=np.int64)
-
-    for (img_seq, lidar_seq, state_seq), y_true in val_ds:
-        y_pred = model.predict_on_batch([img_seq, lidar_seq, state_seq])  # (B,T,2)
-        err = np.abs(y_pred - y_true).mean(axis=2)  # (B,T)
-        sums += err.sum(axis=0)
-        counts += err.shape[0]
-    return sums / np.maximum(counts, 1)
-
 def plot_per_timestep_mae(model, val_ds, seq_len, out_dir, fname="per_timestep_val_mae.png"):
     mt = compute_per_timestep_mae(model, val_ds, seq_len)
     steps = range(1, len(mt)+1)
@@ -381,14 +372,33 @@ def plot_per_timestep_mae(model, val_ds, seq_len, out_dir, fname="per_timestep_v
     plt.close()
     print(f"[PLOT] {path}")
 
+"""def compute_per_timestep_mae(model, val_ds, seq_len):
+    #Return array shape (seq_len,) with mean MAE per timestep over the whole val set.
+    import numpy as np
+    
+    sums = np.zeros(seq_len, dtype=np.float64)
+    counts = np.zeros(seq_len, dtype=np.int64)
+
+
+
+    for (img_seq, lidar_seq, state_seq), y_true in val_ds:
+        y_pred = model.predict_on_batch([img_seq, lidar_seq, state_seq])  # (B,T,2)
+        err = np.abs(y_pred - y_true).mean(axis=2)  # (B,T)
+        sums += err.sum(axis=0)
+        counts += err.shape[0]
+    
+    return sums / np.maximum(counts, 1)
+
+
+
 def scatter_pred_vs_gt(model, val_ds, out_dir,
                        fname_linear="pred_vs_gt_linear.png",
                        fname_angular="pred_vs_gt_angular.png",
                        max_points=100000):
-    """
-    Save two scatter plots: linear and angular component.
-    Samples up to max_points points for speed/clarity.
-    """
+    
+    #Save two scatter plots: linear and angular component.
+    #Samples up to max_points points for speed/clarity.
+    
     import numpy as np
     y_list = []
     p_list = []
@@ -430,6 +440,49 @@ def scatter_pred_vs_gt(model, val_ds, out_dir,
     plt.savefig(path_ang, bbox_inches="tight", dpi=150)
     plt.close()
     print(f"[PLOT] {path_ang}")
+
+"""
+def compute_per_timestep_mae(model, val_ds, seq_len):
+    import numpy as np
+    sums = np.zeros(seq_len, dtype=np.float64)
+    counts = np.zeros(seq_len, dtype=np.int64)
+    for (img_seq, lidar_seq, state_seq), y_true in val_ds:
+        if hasattr(y_true, "numpy"):
+            y_true = y_true.numpy()
+        y_pred = model.predict_on_batch([img_seq, lidar_seq, state_seq])  # (B,T,2)
+        err = np.abs(y_pred - y_true).mean(axis=2)  # (B,T)
+        T = err.shape[1]
+        sums[:T] += err.sum(axis=0)
+        counts[:T] += err.shape[0]
+    return sums / np.maximum(counts, 1)
+
+def scatter_pred_vs_gt(model, val_ds, out_dir,
+                       fname_linear="pred_vs_gt_linear.png",
+                       fname_angular="pred_vs_gt_angular.png",
+                       max_points=100000):
+    import numpy as np, os, matplotlib.pyplot as plt
+    y_list, p_list = [], []
+    for (img_seq, lidar_seq, state_seq), y_true in val_ds:
+        if hasattr(y_true, "numpy"):
+            y_true = y_true.numpy()
+        y_pred = model.predict_on_batch([img_seq, lidar_seq, state_seq])  # (B,T,2)
+        y_list.append(y_true); p_list.append(y_pred)
+    y = np.concatenate(y_list, axis=0).reshape(-1, 2)
+    p = np.concatenate(p_list, axis=0).reshape(-1, 2)
+    N = y.shape[0]
+    if N > max_points:
+        idx = np.random.default_rng(42).choice(N, size=max_points, replace=False)
+        y, p = y[idx], p[idx]
+    # linear
+    plt.figure(); plt.scatter(y[:,0], p[:,0], s=2, alpha=0.4)
+    lim = [min(y[:,0].min(), p[:,0].min()), max(y[:,0].max(), p[:,0].max())]
+    plt.plot(lim, lim); plt.xlabel("GT linear"); plt.ylabel("Pred linear"); plt.title("Pred vs GT — Linear")
+    plt.savefig(os.path.join(out_dir, fname_linear), bbox_inches="tight", dpi=150); plt.close()
+    # angular
+    plt.figure(); plt.scatter(y[:,1], p[:,1], s=2, alpha=0.4)
+    lim = [min(y[:,1].min(), p[:,1].min()), max(y[:,1].max(), p[:,1].max())]
+    plt.plot(lim, lim); plt.xlabel("GT angular"); plt.ylabel("Pred angular"); plt.title("Pred vs GT — Angular")
+    plt.savefig(os.path.join(out_dir, fname_angular), bbox_inches="tight", dpi=150); plt.close()
 
 
 # -------------------------- Train script --------------------------
@@ -509,13 +562,17 @@ def main():
     print(f"[SAVE] run_info.json -> {run_info_path}")
 
 
-
+    
     # Callbacks
     ckpt = tf.keras.callbacks.ModelCheckpoint(
-        filepath=SAVE_PATH, monitor="val_mae", mode="min",
-        save_best_only=True, save_weights_only=False, verbose=1
+        filepath=WEIGHTS_PATH,
+        monitor="val_mae",
+        mode="min",
+        save_best_only=True,
+        save_weights_only=True,   # <--- IMPORTANT
+        verbose=1
     )
-    
+        
     es = tf.keras.callbacks.EarlyStopping(monitor="val_mae", mode="min", patience=6, restore_best_weights=True)
     rlrop = tf.keras.callbacks.ReduceLROnPlateau(monitor="val_mae", mode="min", factor=0.5, patience=2, min_lr=1e-6, verbose=1)
     tb = tf.keras.callbacks.TensorBoard(log_dir=LOG_DIR, write_graph=False)
@@ -527,16 +584,22 @@ def main():
         train_ds,
         validation_data=val_ds,
         epochs=EPOCHS,
-        callbacks=[ckpt, es, rlrop, tb],
+        callbacks=[ es, rlrop, tb],
         verbose=1
     )
+    for (img_seq, lidar_seq, state_seq), y_true in val_ds.take(1):
+        _ = model.predict([img_seq, lidar_seq, state_seq], verbose=0)
+        break
+    # Save final (best already saved)-------------------------------
 
-    # Save final (best already saved)
     try:
         model.save(SAVE_PATH)
         print(f"[SAVE] Model saved to {SAVE_PATH}")
     except Exception as e:
         print("[SAVE] Failed:", e)
+    
+    model.save_weights(WEIGHTS_PATH)
+    print(f"[SAVE] Weights saved to {WEIGHTS_PATH}")
 
 
     # ---- Save a human-readable run_config.txt in the model folder ----

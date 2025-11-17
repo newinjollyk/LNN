@@ -1,0 +1,20 @@
+[0.493s] Invoking command in '/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder': PS1=(warehouse) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(warehouse) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build --no-deps symlink_data --force
+[0.692s] running develop
+[0.827s] running egg_info
+[0.827s] writing tugbot_recorder.egg-info/PKG-INFO
+[0.827s] writing dependency_links to tugbot_recorder.egg-info/dependency_links.txt
+[0.827s] writing entry points to tugbot_recorder.egg-info/entry_points.txt
+[0.827s] writing requirements to tugbot_recorder.egg-info/requires.txt
+[0.828s] writing top-level names to tugbot_recorder.egg-info/top_level.txt
+[0.829s] reading manifest file 'tugbot_recorder.egg-info/SOURCES.txt'
+[0.830s] writing manifest file 'tugbot_recorder.egg-info/SOURCES.txt'
+[0.831s] running build_ext
+[0.831s] Creating /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot-recorder.egg-link (link to .)
+[0.832s] Installing lnn_prediction_01 script to /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/tugbot_recorder
+[0.832s] Installing recorder script to /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/tugbot_recorder
+[0.832s] 
+[0.832s] Installed /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder
+[0.832s] running symlink_data
+[0.832s] symbolically linking /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/resource/tugbot_recorder -> /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/share/ament_index/resource_index/packages
+[0.832s] symbolically linking /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/package.xml -> /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/share/tugbot_recorder
+[0.857s] Invoked command in '/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder' returned '0': PS1=(warehouse) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(warehouse) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build --no-deps symlink_data --force

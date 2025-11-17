@@ -1,0 +1,1 @@
+episode_id,start_id,goal_id,image_file,x_r,y_r,yaw_r,x_g,y_g,yaw_g,dX,dY,sin_dYaw,cos_dYaw,dist_to_goal,dist_home_to_goal,odom_linear_vel,odom_angular_vel,cmd_linear_vel,cmd_angular_vel,lidar_points,marker1_id,marker1_x,marker1_y,marker1_z,marker1_yaw,marker2_id,marker2_x,marker2_y,marker2_z,marker2_yaw,marker3_id,marker3_x,marker3_y,marker3_z,marker3_yaw

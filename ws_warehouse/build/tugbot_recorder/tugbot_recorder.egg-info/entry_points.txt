@@ -1,3 +1,4 @@
 [console_scripts]
+lnn_prediction_01 = tugbot_recorder.lnn_prediction_01:main
 recorder = tugbot_recorder.recorder:main
 

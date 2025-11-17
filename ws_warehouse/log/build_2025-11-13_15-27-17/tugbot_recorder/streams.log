@@ -1,0 +1,45 @@
+[0.479s] Invoking command in '/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder': PS1=(warehouse) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(warehouse) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build
+[0.672s] running develop
+[0.806s] Removing /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot-recorder.egg-link (link to .)
+[0.829s] Invoked command in '/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder' returned '0': PS1=(warehouse) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(warehouse) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build
+[0.830s] Invoking command in '/home/newin/Projects/warehouse/ws_warehouse/src/tugbot_recorder': PS1=(warehouse) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(warehouse) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tugbot_recorder build --build-base /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build install --record /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/install.log --single-version-externally-managed install_data --force
+[1.013s] running egg_info
+[1.013s] writing ../../build/tugbot_recorder/tugbot_recorder.egg-info/PKG-INFO
+[1.013s] writing dependency_links to ../../build/tugbot_recorder/tugbot_recorder.egg-info/dependency_links.txt
+[1.013s] writing entry points to ../../build/tugbot_recorder/tugbot_recorder.egg-info/entry_points.txt
+[1.013s] writing requirements to ../../build/tugbot_recorder/tugbot_recorder.egg-info/requires.txt
+[1.013s] writing top-level names to ../../build/tugbot_recorder/tugbot_recorder.egg-info/top_level.txt
+[1.015s] reading manifest file '../../build/tugbot_recorder/tugbot_recorder.egg-info/SOURCES.txt'
+[1.016s] writing manifest file '../../build/tugbot_recorder/tugbot_recorder.egg-info/SOURCES.txt'
+[1.017s] running build
+[1.017s] running build_py
+[1.017s] copying tugbot_recorder/lnn_prediction.py -> /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build/lib/tugbot_recorder
+[1.018s] copying tugbot_recorder/lnn_prediction_01_FPS.py -> /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build/lib/tugbot_recorder
+[1.018s] copying tugbot_recorder/lnn_prediction_01.py -> /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build/lib/tugbot_recorder
+[1.019s] running install
+[1.019s] running install_lib
+[1.019s] creating /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder
+[1.019s] copying /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build/lib/tugbot_recorder/lnn_prediction.py -> /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder
+[1.020s] copying /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build/lib/tugbot_recorder/lnn_prediction_01_FPS.py -> /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder
+[1.020s] copying /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build/lib/tugbot_recorder/recorder.py -> /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder
+[1.020s] copying /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build/lib/tugbot_recorder/recorder_initial.py -> /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder
+[1.020s] copying /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build/lib/tugbot_recorder/lnn_prediction_01.py -> /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder
+[1.020s] copying /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build/lib/tugbot_recorder/__init__.py -> /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder
+[1.020s] copying /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build/lib/tugbot_recorder/recorder_aruco_01.py -> /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder
+[1.021s] byte-compiling /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder/lnn_prediction.py to lnn_prediction.cpython-310.pyc
+[1.022s] byte-compiling /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder/lnn_prediction_01_FPS.py to lnn_prediction_01_FPS.cpython-310.pyc
+[1.023s] byte-compiling /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder/recorder.py to recorder.cpython-310.pyc
+[1.024s] byte-compiling /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder/recorder_initial.py to recorder_initial.cpython-310.pyc
+[1.025s] byte-compiling /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder/lnn_prediction_01.py to lnn_prediction_01.cpython-310.pyc
+[1.026s] byte-compiling /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder/__init__.py to __init__.cpython-310.pyc
+[1.026s] byte-compiling /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder/recorder_aruco_01.py to recorder_aruco_01.cpython-310.pyc
+[1.026s] running install_data
+[1.027s] copying resource/tugbot_recorder -> /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/share/ament_index/resource_index/packages
+[1.027s] copying package.xml -> /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/share/tugbot_recorder
+[1.027s] running install_egg_info
+[1.028s] Copying ../../build/tugbot_recorder/tugbot_recorder.egg-info to /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot_recorder-0.0.0-py3.10.egg-info
+[1.029s] running install_scripts
+[1.043s] Installing lnn_prediction_01 script to /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/tugbot_recorder
+[1.043s] Installing recorder script to /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/tugbot_recorder
+[1.043s] writing list of installed files to '/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/install.log'
+[1.062s] Invoked command in '/home/newin/Projects/warehouse/ws_warehouse/src/tugbot_recorder' returned '0': PS1=(warehouse) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(warehouse) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tugbot_recorder build --build-base /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/build install --record /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/install.log --single-version-externally-managed install_data --force

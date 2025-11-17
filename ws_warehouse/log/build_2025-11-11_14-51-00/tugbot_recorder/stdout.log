@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing tugbot_recorder.egg-info/PKG-INFO
+writing dependency_links to tugbot_recorder.egg-info/dependency_links.txt
+writing entry points to tugbot_recorder.egg-info/entry_points.txt
+writing requirements to tugbot_recorder.egg-info/requires.txt
+writing top-level names to tugbot_recorder.egg-info/top_level.txt
+reading manifest file 'tugbot_recorder.egg-info/SOURCES.txt'
+writing manifest file 'tugbot_recorder.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/python3.10/site-packages/tugbot-recorder.egg-link (link to .)
+Installing lnn_prediction_01 script to /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/tugbot_recorder
+Installing recorder script to /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/lib/tugbot_recorder
+
+Installed /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder
+running symlink_data
+symbolically linking /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/resource/tugbot_recorder -> /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/share/ament_index/resource_index/packages
+symbolically linking /home/newin/Projects/warehouse/ws_warehouse/build/tugbot_recorder/package.xml -> /home/newin/Projects/warehouse/ws_warehouse/install/tugbot_recorder/share/tugbot_recorder

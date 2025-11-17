@@ -1,0 +1,27 @@
+RUN_FOLDER      = home2A_seq32_cfc64_tr_01
+CSV_PATH        = /home/newin/Projects/warehouse/dataset_clear/goal _A/data_Home2A_ep1__clean.csv
+IMAGE_DIR       = /home/newin/Projects/warehouse/dataset_clear/goal _A/images
+
+# Data/Model hyperparameters
+SEQ_LEN         = 32
+STRIDE          = 1
+BATCH_SIZE      = 8
+EPOCHS          = 50
+LEARNING_RATE   = 0.001
+VAL_SPLIT       = 0.1
+MIXED_PRECISION = True
+JITTER          = True
+SEED            = 42
+
+# Modalities
+IMG_SHAPE       = (128, 128, 1)
+LIDAR_DIM       = 67
+STATE_DIM       = 11
+HIDDEN          = 64
+
+has NCP (CfC)   = True
+RNN core        = CfC
+
+SAVE_PATH       = /home/newin/Projects/warehouse/models/home2A_seq32_cfc64_tr_01/home2A_seq32_cfc64_tr_01.keras
+LOG_DIR         = /home/newin/Projects/warehouse/log_dir/home2A_seq32_cfc64_tr_01
+MODEL_DIR       = /home/newin/Projects/warehouse/models/home2A_seq32_cfc64_tr_01

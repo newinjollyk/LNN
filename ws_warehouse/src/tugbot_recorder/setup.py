@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [  'recorder = tugbot_recorder.recorder:main',
+                            'lnn_prediction_01 = tugbot_recorder.lnn_prediction_01:main',
         ],
     },
 )
